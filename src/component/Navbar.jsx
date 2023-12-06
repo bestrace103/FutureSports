@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
-function Navbar(props) {
+const Navbar = (props) => {
+    const [userImage, setUserImage] = useState("");
     const [searchKey, setSearchKey] = useState("");
 
     const showProfileLoginHandle =()=> {
@@ -11,6 +12,11 @@ function Navbar(props) {
         
         if (name && username && password) {
             alert(`Welcome, ${name}!`);
+            if (name === "Steven") {
+                setUserImage("male");
+            } else if (name === "Mary") {
+                setUserImage("female");
+            }
             props.setName(name); // Update the user's name in the HTML
         } else {
             alert("Invalid input or Invaid account.");
@@ -28,7 +34,7 @@ function Navbar(props) {
         </div>
         <div style={{width: "100%"}}>
             <div className="flex" style={{height: "100px", width: "100%", gap:"5%", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
-                <div className="flex">
+                <div className="flex" style={{alignItems: "center"}}>
                     <NavLink to={"/"}>
                         <img src="images/header-home.jpg" alt="HOME" />
                     </NavLink>
@@ -38,9 +44,13 @@ function Navbar(props) {
                     <NavLink to={"/contact"}>
                         <img src="images/header-contact.jpg" alt="Contact" />
                     </NavLink>
-                    <NavLink onClick={showProfileLoginHandle}>
-                        <img src="images/header-profile.jpg" alt="Profile" id="ProfileLoginImage" />
-                    </NavLink>
+                    {
+                        userImage ?
+                        <img src={`images/${userImage}.png`} alt="Profile" style={{height: "80px", borderRadius: "50%"}} /> :
+                        <NavLink onClick={showProfileLoginHandle}>
+                            <img src="images/header-profile.jpg" alt="Profile" />
+                        </NavLink>
+                    }
                 </div>
                 <div className="flex">
                     <a href="http://www.facebook.com/" className="flex md:inline-f1lex items-center h-100">

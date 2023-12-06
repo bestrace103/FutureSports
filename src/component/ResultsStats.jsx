@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ResultsStats() {
+const ResultsStats = () => {
   return (
     <div className="px-4 mx-auto lg:pt-16 lg:flex-row md:px-8" style={{margin: 0}}>
       <div className="color-gray">
