@@ -9,6 +9,7 @@ const Contact = () => {
           Contact Details
           </h2>
           <h2></h2>
+          <div className="small-font-20">
         gldfjg l dsfglkjsdlfgkj fgdlldfgk jldsfg j<br />
         0400 000 000<br />
         <br />
@@ -16,6 +17,7 @@ const Contact = () => {
         0400 000 000<br />
         <br />
         1 Main Street, Tennis Town 0000
+        </div>
         </div>
       </div>
     </div>

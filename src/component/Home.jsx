@@ -129,17 +129,17 @@ const Home = (props) => {
     }
 
     return (
-        <section className="pt-24 px-5 flex color-gray" style={{flexDirection: "row", gap: 8}}>
-            <div style={{width: "40%"}}>
+        <section className="pt-24 px-5 flex color-gray small-column small-font-15" style={{flexDirection: "row", gap: 8}}>
+            <div className="small-width-100 big-align-center" style={{width: "40%"}}>
                 {props.name && <div>{props.name}</div>}
                 Reminder: Club Memberships are due next week<br />
                 Join us for a fun social gathering Sat 25th Nov<br />
-                <img src="images/mainpage.jpg" alt="Tennis Activity" />
+                <img className="big-margin-auto" src="images/mainpage.jpg" alt="Tennis Activity" />
             </div>
-            <div style={{width: "60%"}}>
+            <div className="small-width-100 big-align-center" style={{width: "60%"}}>
                 Bookings<br />
                 Book a court, coaching session, or the venue.<br />
-                <div className="flex">
+                <div className="flex small-img big-content-center">
                     <img src="images/bookings-court.jpg" alt="Court Hire" onClick={showCourtBookingForm} />
                     <img src="images/bookings-coach.jpg" alt="Coach Bookings" onClick={showCoachBookingForm} />
                     <img src="images/bookings-venue.jpg" alt="Venue Bookings" onClick={showVenueBookingForm} />
@@ -148,7 +148,7 @@ const Home = (props) => {
                 <br />
                 Connect Zone<br />
                 Connect with others with a similar interest, from night tennis to finding a hitting partner.<br />
-                <img src="images/connectzone.jpg" alt="Connect Zone" />
+                <img className="big-margin-auto" src="images/connectzone.jpg" alt="Connect Zone" />
             </div>
         </section>
     )

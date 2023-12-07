@@ -9,6 +9,7 @@ const Play = () => {
           Let's Play Tennis
           </h2>
           <h2></h2>
+          <div className="small-font-20">
         gldfjg l dsfglkjsdlfgkj fgdlldfgk jldsfg j<br/>
         gldfjg l dsfglkjsdlfgkj fgdlldfgk jldsfg j<br/>
         <br/>
@@ -16,6 +17,7 @@ const Play = () => {
         gldfjg l dsfglkjsdlfgkj fgdlldfgk jldsfg j<br/>
         <br/>
         gldfjg l dsfglkjsdlfgkj fgdlldfgk jldsfg j
+        </div>
         </div>
       </div>
     </div>

@@ -29,11 +29,11 @@ const Navbar = (props) => {
 
   return (
     <nav className="flex px-4 py-2 md:shadow-lg items-center relative w-100">
-        <div className="text-lg font-bold md:py-0 py-4">
+        <div className="text-lg font-bold md:py-0 py-4 small-hidden">
             FutureSports
         </div>
         <div style={{width: "100%"}}>
-            <div className="flex" style={{height: "100px", width: "100%", gap:"5%", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
+            <div className="flex small-gap-0 small-height-50" style={{height: "100px", width: "100%", gap:"5%", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
                 <div className="flex" style={{alignItems: "center"}}>
                     <NavLink to={"/"}>
                         <img src="images/header-home.jpg" alt="HOME" />
@@ -64,8 +64,8 @@ const Navbar = (props) => {
                     </a>
                 </div>
                 <div className="flex" style={{justifyContent: "center", alignItems: "center"}}>
-                    <input type="email" placeholder="Search" value={searchKey} onChange={(e)=>{setSearchKey(e.currentTarget.value)}} className="block px-1 py-1.5 rounded-md focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    <button className="px-2 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50" onClick={search}>
+                    <input type="email" placeholder="Search" value={searchKey} onChange={(e)=>{setSearchKey(e.currentTarget.value)}} className="small-input block px-1 py-1.5 rounded-md focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    <button className="px-2 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50 small-button" onClick={search}>
                         search
                     </button>
                     <a href="https://openweathermap.org/city/2147714" className="flex md:inline-f1lex items-center h-100">
@@ -74,23 +74,23 @@ const Navbar = (props) => {
                 </div>
             </div>
             <div className="flex" style={{justifyContent: "center"}}>
-                <div className="flex" style={{width: "100%", justifyContent: "center", gap: "5%", background: "#5AC04A"}}>
-                    <NavLink to={"/competitions"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold">
+                <div className="flex small-gap-0 small-font-10" style={{width: "100%", justifyContent: "center", gap: "5%", background: "#5AC04A"}}>
+                    <NavLink to={"/competitions"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold small-button small-border">
                         <span>COMPETITIONS</span>
                     </NavLink>
-                    <NavLink to={"/resultsstats"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold">
+                    <NavLink to={"/resultsstats"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold small-button small-border">
                         <span>RESULTS & STATS</span>
                     </NavLink>
-                    <NavLink to={"/generalinfo"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold">
+                    <NavLink to={"/generalinfo"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold small-button small-border">
                         <span>GENERAL INFO</span>
                     </NavLink>
-                    <NavLink to={"/calendar"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold">
+                    <NavLink to={"/calendar"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold small-button small-border">
                         <span>CALENDAR</span>
                     </NavLink>
-                    <NavLink to={"#"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold">
+                    <NavLink to={"#"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold small-button small-border">
                         <span>BOOKINGS</span>
                     </NavLink>
-                    <NavLink to={"#"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold">
+                    <NavLink to={"#"} className="flex md:inline-flex p-4 items-center bg-gray hover:bg-gray-50 border-solid-fw-bold small-button small-border">
                         <span>CONNECT</span>
                     </NavLink>
                 </div>
