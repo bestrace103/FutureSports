@@ -10,12 +10,15 @@ const Home = (props) => {
     }
 
     const valDate = (val) => {
-        return new Date(val).valueOf();
+        const arr = val.split("/");
+        const isNumber = Boolean(Number(arr[0])) && Boolean(Number(arr[1])) && Boolean(Number(arr[2]));
+        // return new Date(val).valueOf();
+        return isNumber;
     }
 
     const valTime = (val) => {
-        let val1 = Number(val.split(" ")[0]);
-        let val2 = (val.split(" ")[1] === "hour");
+        const val1 = Boolean(Number(val.split(" ")[0]));
+        const val2 = (val.split(" ")[1] === "hour");
         return (val1 && val2);
     }
 
@@ -25,18 +28,18 @@ const Home = (props) => {
     
     const showCourtBookingForm =()=> {
         let date = "", time = "", players = "";
-        let valid = false;
-        while(!valid) {
+        let valid1 = false, valid2 = false, valid3 = false;
+        while(!valid1) {
             date = prompt("Enter the booking date (e.g., DD/MM/YY):");
-            valid = (valDate(date));
+            valid1 = (valDate(date));
         }
-        while(valid) {
+        while(!valid2) {
             time = prompt("Enter the length of time (e.g., 1 hour):");
-            valid = (valTime(time));
+            valid2 = (valTime(time));
         }
-        while(!valid) {
+        while(!valid3) {
             players = prompt("Enter the number of players:");
-            valid = (valNum(players));
+            valid3 = (valNum(players));
         }
     
         if (date && time && players) {
@@ -48,19 +51,19 @@ const Home = (props) => {
 
     const showCoachBookingForm =()=> {
         let date = "", time = "", skill = "";
-        let valid = false;
+        let valid1 = false, valid2 = false, valid3 = false;
 
-        while(!valid) {
+        while(!valid1) {
             date = prompt("Enter the booking date (e.g., DD/MM/YY):");
-            valid = (valDate(date));
+            valid1 = (valDate(date));
         }
-        while(valid) {
+        while(!valid2) {
             time = prompt("Enter the length of time (e.g., 1 hour):");
-            valid = (valTime(time));
+            valid2 = (valTime(time));
         }
-        while(valid) {
+        while(!valid3) {
             skill = prompt("Indicate Skill Level (A)Advanced / (B) Beginner:");
-            valid = (valSkill(skill));
+            valid3 = (valSkill(skill));
         }
 
         // Validate input (you can add more validation as needed)
@@ -74,19 +77,19 @@ const Home = (props) => {
 
     const showVenueBookingForm=()=> {
         let date = "", time = "", players = "";
-        let valid = false;
+        let valid1 = false, valid2 = false, valid3 = false;
 
-        while(!valid) {
+        while(!valid1) {
             date = prompt("Enter the booking date (e.g., DD/MM/YY):");
-            valid = (valDate(date));
+            valid1 = (valDate(date));
         }
-        while(valid) {
+        while(!valid2) {
             time = prompt("Enter the length of time (e.g., 1 hour):");
-            valid = (valTime(time));
+            valid2 = (valTime(time));
         }
-        while(!valid) {
+        while(!valid3) {
             players = prompt("Enter the number of guests:");
-            valid = (valNum(players));
+            valid3 = (valNum(players));
         }
 
     
@@ -99,23 +102,23 @@ const Home = (props) => {
 
     const showEquipmentBookingForm =()=> {
         let date = "", time = "", rackets = "", balls = "";
-        let valid = false;
+        let valid1 = false, valid2 = false, valid3 = false, valid4 = false;
 
-        while(!valid) {
+        while(!valid1) {
             date = prompt("Enter the booking date (e.g., DD/MM/YY):");
-            valid = (valDate(date));
+            valid1 = (valDate(date));
         }
-        while(valid) {
+        while(!valid2) {
             time = prompt("Enter the length of time (e.g., 1 hour):");
-            valid = (valTime(time));
+            valid2 = (valTime(time));
         }
-        while(!valid) {
+        while(!valid3) {
             rackets = prompt("Enter the number of rackets:");
-            valid = (valNum(rackets));
+            valid3 = (valNum(rackets));
         }
-        while(!valid) {
+        while(!valid4) {
             balls = prompt("Enter the number of ball time (4 balls / tin):");
-            valid = (valNum(balls));
+            valid4 = (valNum(balls));
         }
     
         if (date && time && rackets && balls) {
