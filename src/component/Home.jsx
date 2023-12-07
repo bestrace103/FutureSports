@@ -35,7 +35,7 @@ const Home = (props) => {
         }
         while(!valid2) {
             time = prompt("Enter the length of time (e.g., 1 hour):");
-            valid2 = (valTime(time));
+            valid2 = (valNum(time));
         }
         while(!valid3) {
             players = prompt("Enter the number of players:");
@@ -59,7 +59,7 @@ const Home = (props) => {
         }
         while(!valid2) {
             time = prompt("Enter the length of time (e.g., 1 hour):");
-            valid2 = (valTime(time));
+            valid2 = (valNum(time));
         }
         while(!valid3) {
             skill = prompt("Indicate Skill Level (A)Advanced / (B) Beginner:");
@@ -85,7 +85,7 @@ const Home = (props) => {
         }
         while(!valid2) {
             time = prompt("Enter the length of time (e.g., 1 hour):");
-            valid2 = (valTime(time));
+            valid2 = (valNum(time));
         }
         while(!valid3) {
             players = prompt("Enter the number of guests:");
@@ -110,7 +110,7 @@ const Home = (props) => {
         }
         while(!valid2) {
             time = prompt("Enter the length of time (e.g., 1 hour):");
-            valid2 = (valTime(time));
+            valid2 = (valNum(time));
         }
         while(!valid3) {
             rackets = prompt("Enter the number of rackets:");
